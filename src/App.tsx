@@ -7,6 +7,7 @@ import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
 import { DefaultInput } from './components/DefaultInput';
 import { DefaultButton } from './components/DefaultButton';
+import { PlayCircleIcon } from 'lucide-react';
 import { Cycles } from './components/Cycles';
 import { Footer } from './components/Footer/indext.tsx';
 
