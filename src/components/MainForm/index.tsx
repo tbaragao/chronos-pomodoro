@@ -2,17 +2,25 @@ import { DefaultInput } from '../DefaultInput';
 import { Cycles } from '../Cycles';
 import { DefaultButton } from '../DefaultButton';
 import { PlayCircleIcon } from 'lucide-react';
+import { useRef, useState } from 'react';
 
 export function MainForm() {
+  const taskNameInput = useRef<HTMLInputElement>(null);
+
+  function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+  }
+
   return (
     <>
-      <form className='form' action=''>
+      <form className='form' onSubmit={handleCreateNewTask}>
         <div className='formRow'>
           <DefaultInput
             type={'text'}
             id={'menuInput'}
             labelText={'Task'}
             placeholder={'Insert here your task name'}
+            ref={taskNameInput}
           />
         </div>
 
